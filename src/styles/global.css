@@ -1,0 +1,9 @@
+.astro-code {
+    padding:2rem;
+    border-radius: 1rem;
+    margin:2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;;
+}

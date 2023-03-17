@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import Slug from "./posts/[...slug].astro";
+
+const pageTitle = "My Astro Learning Blog";
+const allPosts = await getCollection("recipes");
+allPosts.sort((a,b) => (a.data.title > b.data.title) ? 1 : ((b.data.title > a.data.title) ? -1 : 0))
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <p>This is where I will post about my journey learning Astro.</p>
+  <div class="flex justify-center space-x-4">
+    <div 
+      data-target="all"
+      data-te-chip-init
+      data-te-ripple-init
+      class="tag-button [word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-everglade-600 py-0 px-[12px] text-[13px] font-normal normal-case leading-loose text-everglade-100 hover:bg-everglade-400 shadow-none transition-opacity duration-1500 ease-linear hover:!shadow-none active:bg-everglade-800 dark:bg-neutral-600 dark:text-neutral-200"
+      data-te-close="true">
+      All
+    </div>
+   {tags.map((tag) => (
+      <div data-target={tag} 
+      data-te-chip-init
+      data-te-ripple-init
+      class="tag-button [word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-everglade-600 py-0 px-[12px] text-[13px] font-normal normal-case leading-loose text-everglade-100 hover:bg-everglade-400 shadow-none transition-opacity duration-1500 ease-linear hover:!shadow-none active:bg-everglade-800 dark:bg-neutral-600 dark:text-neutral-200"
+      data-te-close="true"
+      
+      >{tag}</div>
+    ))}
+  </div>
+  <div class="flex flex-row flex-wrap justify-center pt-10 pb-10">
+    {
+      allPosts.map((post) => (
+          // post.slug.search('/') > 0 ? <h2>{post.slug.substring(0, post.slug.indexOf('/'))}</h2><ul><BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} /></ul> : <BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
+        <BlogPost slug={post.slug} image={post.data.image.url} tags={post.data.tags} url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
+      ))
+    }
+   </div>
+</BaseLayout> 
+<script>
+import type { log } from "astro/dist/core/logger/core";
+  let searchedTags = []
+  let buttons = document.getElementsByClassName('tag-button');
+  let listItems = document.getElementsByClassName('list')
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function(){
+      buttons[i].classList.toggle('bg-everglade-800')
+      searchedTags.push(buttons[i].dataset.target);
+      for (let j = 0; j < listItems.length; j++) {
+        listItems[j].style.display = 'none'
+        let show = 0
+        for (let x = 0; x < searchedTags.length; x++) {
+          if (listItems[j].dataset.tags.indexOf(searchedTags[x]) >= 0) {
+            show++
+            // listItems[j].style.display = 'block'
+          } else {
+            show--
+          }
+        }
+        if (show == searchedTags.length) {
+          listItems[j].style.display = 'block'
+        }
+      }
+      if (buttons[i].dataset.target == 'all') {
+        searchedTags = []
+        for (let j = 0; j < listItems.length; j++) {
+         listItems[j].style.display = 'block'
+        }
+        for (let j = 0; j < buttons.length; j++) {
+         buttons[j].classList.remove('bg-everglade-800')
+        }
+      }
+    })
+  }
+</script>
