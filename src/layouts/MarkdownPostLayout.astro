@@ -5,10 +5,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout pageTitle={frontmatter.title}>
 <p class="text-xs">Written by {frontmatter.author}</p>
 
-
-  <div class="tags">
+<!-- <h5 class="text-xs text-everglade-900"></h5> -->
+  <div class="tags text-xs flex flex-row divide-x align-items-center justify-items-center text-center">
+    <span class="p-1 m-1">Tags</span> 
     {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+      <a class="p-1 m-1 hover:text-everglade-900" href={`/tags/${tag}`}>{tag}</a>
     ))}
   </div>
 <slot />

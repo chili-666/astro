@@ -4,8 +4,13 @@ import Hamburger from './Hamburger.astro';
 import ThemeIcon from './ThemeIcon.astro';
 import ReactNav from "./ReactNav";
 import DropDown from "./DropDown";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+allPosts.sort((a,b) => (a.data.title > b.data.title) ? 1 : ((b.data.title > a.data.title) ? -1 : 0))
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
-<header>
-    <ReactNav client:load/>
+<header class="fixed top-0 w-full z-10 font-mono">
+    <ReactNav tagItems={tags} client:load />
 </header>
