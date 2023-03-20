@@ -1,0 +1,21 @@
+---
+const { url, title, sub, folder, tags, image, slug } = Astro.props;
+// const tags = post.split(",");
+
+const bg = "bg-url[('" + url + "')]";
+---
+
+<a
+  class="m-1 list flex justify-center block w-full lg:w-1/6 rounded-lg bg-everglade-500 border-solid border-2 border-everglade-900 p-6 shadow-black shadow-lg dark:bg-neutral-700 bg-everglade-900 block rounded-lg bg-everglade-900 p-6 shadow-lg dark:bg-neutral-700"
+  data-tags={tags != undefined ? tags : "none"}
+  href={url}
+>
+  <div class="flex flex-col justify-center">
+    {image != "" ? <img src={image} /> : null}
+    <h5
+      class="text-center text-s font-medium leading-tight text-gold dark:text-neutral-50 p-2"
+    >
+      {title}
+    </h5>
+  </div>
+</a>
