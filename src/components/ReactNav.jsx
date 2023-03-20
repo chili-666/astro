@@ -19,8 +19,7 @@ function classNames(...classes) {
 
 export default function ReactNav(props) {
   console.log("Props", props)
-
-
+ 
   return (
     <Disclosure as="nav" className="bg-everglade-700 p-5 fixed-top">
       {({ open }) => (
@@ -53,7 +52,7 @@ export default function ReactNav(props) {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-everglade-900 text-white' : 'text-everglade-50 hover:bg-everglade-900 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          'rounded-md px-3 py-2 text-sm font-medium header-link'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                         >
