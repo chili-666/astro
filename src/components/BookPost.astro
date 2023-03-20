@@ -1,19 +1,47 @@
 ---
-const { url, title, sub, folder, tags, image, slug } = Astro.props;
+const {
+  url,
+  title,
+  sub,
+  folder,
+  tags,
+  image,
+  slug,
+  rating,
+  genre,
+  readMonth,
+  readYear,
+} = Astro.props;
 // const tags = post.split(",");
+import { StarIcon } from "@heroicons/react/24/solid";
+import StarRating from "./StarRating.astro";
+let starRating = "";
+
+for (let i = 0; i < rating; i++) {
+  starRating = starRating + "★";
+}
 ---
 
 <a
   class="m-1 list flex justify-center block w-full lg:w-1/6 rounded-lg bg-everglade-500 border-solid border-2 border-everglade-900 p-6 shadow-black shadow-lg dark:bg-neutral-700 bg-everglade-900 block rounded-lg bg-everglade-900 p-6 shadow-lg dark:bg-neutral-700"
   data-tags={tags != undefined ? tags : "none"}
   href={url}
+  target="_blank"
 >
   <div class="flex flex-col justify-center">
+    <div class="ml-auto mr-0 text-xs text-coral-500 font-sans">
+      {starRating}
+
+      <!-- <StarIcon class="block h-6 w-6 text-everglade-100" /> -->
+    </div>
     {image != "" ? <img src={image} /> : null}
     <h5
       class="text-center font-mono mb-2 text-s font-medium leading-tight text-everglade-100 dark:text-neutral-50"
     >
       {title}
     </h5>
+    <div class="ml-auto mr-0 text-xs">
+      {genre} | {readMonth}/{readYear}
+    </div>
   </div>
 </a>

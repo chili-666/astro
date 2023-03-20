@@ -14,7 +14,7 @@ const postsCollection = defineCollection({
       tags: z.array(z.string())
     })
 });
-// Export a single `collections` object to register your collection(s)
+
 
 
 const recipeCollection = defineCollection({
@@ -30,8 +30,22 @@ const recipeCollection = defineCollection({
     tags: z.array(z.string())
   })
 });
+
+const booksCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    readYear: z.string(),
+    readMonth: z.string(),
+    description: z.string(),
+    rating: z.number(),
+    tags: z.array(z.string()),
+    genre: z.string(),
+    pages: z.number()
+  })
+});
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   posts: postsCollection,
   recipes: recipeCollection,
+  books: booksCollection,
 };

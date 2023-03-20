@@ -1,16 +1,31 @@
 ---
 const { frontmatter } = Astro.props;
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout pageTitle={frontmatter.title}>
-<p class="text-xs">Written by {frontmatter.author}</p>
 
-<!-- <h5 class="text-xs text-everglade-900"></h5> -->
-  <div class="tags text-xs flex flex-row divide-x align-items-center justify-items-center text-center">
-    <span class="p-1 m-1">Tags</span> 
-    {frontmatter.tags.map((tag) => (
-      <a class="p-1 m-1 hover:text-everglade-900" href={`/tags/${tag}`}>{tag}</a>
-    ))}
+<BaseLayout pageTitle={frontmatter.title}>
+  <p class="text-xs p-1 m-1">Written by {frontmatter.author}</p>
+
+  <!-- <h5 class="text-xs text-everglade-900"></h5> -->
+  <div
+    class="tags text-xs flex flex-row divide-x align-items-center justify-items-center text-center"
+  >
+    <span class="p-1 m-1">Tags</span>
+    {
+      frontmatter.tags.map((tag) => (
+        <a class="p-1 m-1 hover:text-everglade-900" href={`/tags/${tag}`}>
+          {tag}
+        </a>
+      ))
+    }
   </div>
-<slot />
+
+  <div class="flex flex-col-reverse lg:flex-row w-full">
+    <div class="w-100 lg:w-2/3 recipe lg:mr-5 mt-3 lg:mt-0">
+      <slot />
+    </div>
+    <div class="">
+      <img class="rounded shadow-sm" src={frontmatter.image.url} />
+    </div>
+  </div>
 </BaseLayout>

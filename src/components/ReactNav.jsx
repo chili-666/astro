@@ -7,7 +7,8 @@ let navigation = [
   { name: 'Random Thoughts', href: '/random/', current: false },
   { name: 'Code', href: '/code/', current: false },
   { name: 'Recipes', href: '/recipes/', current: false },
- 
+  { name: 'Books', href: '/books/', current: false },
+
 ]
 
 function classNames(...classes) {
@@ -45,7 +46,7 @@ export default function ReactNav(props) {
 
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 justify-content-center align-items-center">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -59,12 +60,12 @@ export default function ReactNav(props) {
                         {item.name}
                       </a>
                     ))}
-                  
+
                    {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
+                <Menu as="div" className="">
                   <div>
-                    <Menu.Button className="text-everglade-50 hover:bg-everglade-900 hover:text-white">
-                      <span className="sr-only">Open user menu</span>
+                    <Menu.Button className="text-everglade-50 hover:bg-everglade-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                      <span className="sr-only">Tags</span>
                       Tags
                     </Menu.Button>
                   </div>
@@ -77,14 +78,14 @@ export default function ReactNav(props) {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none flex flex-row">
+                    <Menu.Items className="absolute  z-10 mt-2 origin-top-right rounded-md bg-everglade-800 text-everglade-100 py-1 shadow-lg shadow-black ring-1 ring-black ring-opacity-5 focus:outline-none flex flex-row">
                       {props.tagItems.map((tag) => (
                            <Menu.Item>
                            {({ active }) => (
                              <a
                                key={tag}
                                href={"/tags/" + tag}
-                               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                               className={classNames(active ? 'bg-everglade-400' : '', 'block px-4 py-2 text-sm text-gray-100')}
                              >
                                {tag}
                              </a>
@@ -110,7 +111,7 @@ export default function ReactNav(props) {
                   </svg>
                     </button>
                 </a>
-               
+
               </div>
             </div>
           </div>

@@ -1,0 +1,66 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BookPost from "../components/BookPost.astro";
+import Slug from "./posts/[...slug].astro";
+import TagPills from "../components/TagPills.astro";
+const pageTitle = "Books";
+const allPosts = await getCollection("books");
+allPosts.sort((a,b) => (a.data.title > b.data.title) ? 1 : ((b.data.title > a.data.title) ? -1 : 0))
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+const years = [...new Set(allPosts.map((post) => post.data.readYear).flat())];
+const ratings = [...new Set(allPosts.map((post) => post.data.rating).flat())];
+let starRating = ''
+for (let i = 0; i < ratings; i++) {
+  starRating = starRating + "★";
+}
+
+let trackedYears = [];
+for (let i = 0; i < years.length; i++) {
+  trackedYears[i] = {
+    "year": years[i],
+    "count": 0,
+    "pages": 0,
+    "avRating": 0
+  }
+}
+
+for (let i = 0; i < years.length; i++) {
+    allPosts.map(function(post) {
+      if (post.data.readYear == years[i]) {
+        trackedYears[[i]]['count'] = trackedYears[i]['count'] +1
+        trackedYears[[i]]['pages'] = trackedYears[i]['pages'] + post.data.pages
+        trackedYears[[i]]['avRating'] = trackedYears[i]['avRating'] + post.data.rating
+      }
+  })
+  
+}
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <p class="text-xs text-coral-200 text-bold">running count:
+  {trackedYears.map((year) => (
+    <div class="text-xs ml-2">{year.year} : {year.count} ({year.pages} pages)</div>
+ ))}
+ </p>
+  <TagPills tags={tags}/>
+  <div class="flex flex-row flex-wrap justify-center pt-10 pb-10">
+    {
+      allPosts.map((post) => (
+          // post.slug.search('/') > 0 ? <h2>{post.slug.substring(0, post.slug.indexOf('/'))}</h2><ul><BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} /></ul> : <BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
+        <BookPost 
+          readMonth={post.data.readMonth} 
+          readYear={post.data.readYear} 
+          pages={post.data.pages} 
+          genre={post.data.genre} 
+          rating={post.data.rating} 
+          slug={post.slug} tags={post.data.tags} 
+          url={"https://www.google.com/search?q=book+" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
+      ))
+    }
+   </div>
+
+</BaseLayout> 
+<script>
+  import "../scripts/tags.js";
+  </script>

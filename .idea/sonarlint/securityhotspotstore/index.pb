@@ -1,14 +1,12 @@
 
-K
-src/components/Social.astro,c\f\cf12b9af5b0c066ee90fb5958cd6ef5aef4d3ab0
-K
-src/components/Header.astro,3\1\3199892f518717700e890d7556538c1a7ce7825f
 E
 src/pages/index.astro,9\f\9fb1c525d9350f85b7aa1f2647cfd4eba63fab2a
 K
 src/components/Footer.astro,9\a\9a29b726523302a14b91c2458f6b162eea321e8d
 N
 src/components/Hamburger.astro,e\0\e0afec770bdf8862d22e69ea628fcd14d45ea6cd
+C
+src/scripts/menu.js,2\7\275e963be71e74d18e50768a84dff2dc63885b74
 E
 src/styles/global.css,3\e\3ea85257d8c74ab2f79dac9121fc26edb558777a
 L
@@ -17,13 +15,11 @@ I
 src/components/Card.astro,1\d\1dc6e1c379955e729dbab700d34390baebef6ea9
 M
 src/components/BlogPost.astro,6\6\665b6f5560350616c01ed8efeee2f6fc4d2cf101
-C
-src/scripts/menu.js,2\7\275e963be71e74d18e50768a84dff2dc63885b74
 O
 src/components/Navigation.astro,a\6\a6b00877aa08b629246b456c66e137e741fa782b
-O
-src/pages/books/[...slug].astro,0\0\0086b2aa092df2af55a20923a7254e24e5815555
-K
-src/components/ReactNav.jsx,d\d\dd49b3d1e5cd89daeaa3aa322cefcafe5e826cff
 E
 src/content/config.ts,4\9\496767fa61cf67c9209a6aad4b8caf1006985c72
+K
+src/components/ReactNav.jsx,d\d\dd49b3d1e5cd89daeaa3aa322cefcafe5e826cff
+O
+src/pages/books/[...slug].astro,0\0\0086b2aa092df2af55a20923a7254e24e5815555

@@ -14,11 +14,11 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 <BaseLayout pageTitle={pageTitle}>
   <p>This is where I will post about my journey learning Astro.</p>
   <TagPills tags={tags}/>
-  <div class="flex flex-row flex-wrap justify-center pt-10 pb-10">
+  <div class="flex flex-col lg:flex-row flex-wrap justify-center pt-10 pb-10">
     {
       allPosts.map((post) => (
           // post.slug.search('/') > 0 ? <h2>{post.slug.substring(0, post.slug.indexOf('/'))}</h2><ul><BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} /></ul> : <BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
-        <BlogPost slug={post.slug} image={post.data.image.url} tags={post.data.tags} url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
+        <BlogPost slug={post.slug} image={post.data.image.url} tags={post.data.tags} url={"/recipes/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
       ))
     }
    </div>
