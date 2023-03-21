@@ -34,6 +34,7 @@ const recipeCollection = defineCollection({
 const booksCollection = defineCollection({
   schema: z.object({
     title: z.string(),
+    author: z.string(),
     readYear: z.string(),
     readMonth: z.string(),
     description: z.string(),

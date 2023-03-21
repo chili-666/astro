@@ -3,6 +3,7 @@ import Navigation from "./Navigation.astro";
 import Hamburger from "./Hamburger.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 import ReactNav from "./ReactNav";
+import NewNav from "./NewNav.astro"
 import DropDown from "./DropDown";
 import { getCollection } from "astro:content";
 
@@ -14,5 +15,6 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <header class="fixed top-0 w-full z-10 font-mono">
-  <ReactNav tagItems={tags} client:load />
+  <NewNav tagItems={tags} />
+  <!-- <ReactNav tagItems={tags} client:load /> -->
 </header>

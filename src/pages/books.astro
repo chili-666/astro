@@ -55,7 +55,8 @@ for (let i = 0; i < years.length; i++) {
           genre={post.data.genre} 
           rating={post.data.rating} 
           slug={post.slug} tags={post.data.tags} 
-          url={"https://www.google.com/search?q=book+" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
+          author={post.data.author}
+          url={"https://openlibrary.org/search?q=" + post.data.title.replace(' ', '+') + "&author=" + post.data.author.replace(' ', '+')} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
       ))
     }
    </div>

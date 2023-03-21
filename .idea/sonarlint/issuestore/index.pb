@@ -20,10 +20,12 @@ M
 C
 src/scripts/menu.js,2\7\275e963be71e74d18e50768a84dff2dc63885b74
 O
-src/components/Navigation.astro,a\6\a6b00877aa08b629246b456c66e137e741fa782b
-O
 src/pages/books/[...slug].astro,0\0\0086b2aa092df2af55a20923a7254e24e5815555
 K
 src/components/ReactNav.jsx,d\d\dd49b3d1e5cd89daeaa3aa322cefcafe5e826cff
 E
 src/content/config.ts,4\9\496767fa61cf67c9209a6aad4b8caf1006985c72
+O
+src/components/Navigation.astro,a\6\a6b00877aa08b629246b456c66e137e741fa782b
+K
+src/components/NewNav.astro,5\d\5d3fbff4c87e9591d1ac7cb106f8852e145a7c7f

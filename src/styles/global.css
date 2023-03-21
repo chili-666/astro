@@ -22,4 +22,8 @@
         /* list-style-type: disc !important; */
         @apply lg:ml-1 lg:mr-2 mt-4 text-justify
     }
+
+    .astro-code {
+        @apply mockup-code
+    }
 }

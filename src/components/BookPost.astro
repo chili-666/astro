@@ -11,6 +11,7 @@ const {
   genre,
   readMonth,
   readYear,
+  author,
 } = Astro.props;
 // const tags = post.split(",");
 import { StarIcon } from "@heroicons/react/24/solid";
@@ -42,6 +43,9 @@ for (let i = 0; i < rating; i++) {
     </h5>
     <div class="ml-auto mr-0 text-xs text-sienna drop-shadow">
       {genre} | {readMonth}/{readYear}
+    </div>
+    <div class="ml-auto mr-0 text-xs text-gold drop-shadow">
+      written by {author}
     </div>
   </div>
 </a>

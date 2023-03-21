@@ -1,0 +1,63 @@
+---
+const {tagItems} = Astro.props;
+---
+<div class="navbar bg-everglade-500 lowercase text-gold">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 bg-sienna">
+        <li><a>Item 1</a></li>
+        <li tabindex="0">
+          <a class="justify-between">
+            Parent
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+          </a>
+          <ul class="p-2 bg-everglade-500">
+            <li><a href="/random">Submenu 1</a></li>
+            <li><a href="/code">Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/books">Item 3</a></li>
+      </ul>
+    </div>
+    <a href="/" class="btn btn-ghost normal-case text-xl text-gold text-bold">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path fill-rule="evenodd" d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z" clip-rule="evenodd" />
+      </svg>
+      
+      
+    </a>
+  </div>
+  <div class="navbar-center hidden lg:flex lowercase text-gold">
+    <ul class="menu menu-horizontal px-1 ">
+      <li><a class="transition ease-in-out delay-150 hover:-translate-y-1 hover:bg-raisin duration-300" href="/random/">Random Thoughts</a></li>
+      <li><a class="transition ease-in-out delay-150 hover:-translate-y-1 hover:bg-raisin duration-300" href="/code/">Code</a></li>
+      <li><a class="transition ease-in-out delay-150 hover:-translate-y-1 hover:bg-raisin duration-300" href="/recipes/">Recipes</a></li>
+      <li><a class="transition ease-in-out delay-150 hover:-translate-y-1 hover:bg-raisin duration-300" href="/books/">Books</a></li>
+      <li tabindex="0">
+        <a class="transition ease-in-out delay-150 hover:-translate-y-1 hover:bg-raisin duration-300">
+          Tags
+          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </a>
+        <ul class="p-5 bg-sienna text-raisin">
+          <li>
+         {tagItems.map((tag) => (
+          <a href={"/tags/" + tag}>{tag}</a>
+         ))}
+         </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+        <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+      </svg>
+      
+    </a>
+  </div>
+</div>
