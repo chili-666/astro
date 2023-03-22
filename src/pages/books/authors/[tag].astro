@@ -32,7 +32,7 @@ const tags = [...new Set(posts.map((post) => post.data.author).flat())];
     {
       posts.map((post) => (
         <BookPost
-          url={post.url}
+          url={post.data.url}
           title={post.data.title}
           tags={post.data.tags}
         />
