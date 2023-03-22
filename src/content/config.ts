@@ -41,7 +41,15 @@ const booksCollection = defineCollection({
     rating: z.number(),
     tags: z.array(z.string()),
     genre: z.string(),
-    pages: z.number()
+    pages: z.number(),
+    image: z.object({
+      url: z.string(),
+      alt: z.string()
+    }),
+    read: z.boolean(),
+    reading: z.boolean(),
+    started: z.date(),
+    finished: z.date(),
   })
 });
 // Export a single `collections` object to register your collection(s)

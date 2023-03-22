@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BookPost from "../components/BookPost.astro";
 import Slug from "./posts/[...slug].astro";
-import TagPills from "../components/TagPills.astro";
+import BookPills from "../components/BookPills.astro";
 const pageTitle = "Books";
 const allPosts = await getCollection("books");
 allPosts.sort((a,b) => (a.data.title > b.data.title) ? 1 : ((b.data.title > a.data.title) ? -1 : 0))
@@ -21,30 +21,46 @@ for (let i = 0; i < years.length; i++) {
     "year": years[i],
     "count": 0,
     "pages": 0,
-    "avRating": 0
+    "avRating": 0,
+    "days": 0,
+    "pagesAvg": 0
   }
 }
 
+
 for (let i = 0; i < years.length; i++) {
     allPosts.map(function(post) {
-      if (post.data.readYear == years[i]) {
+      if (post.data.readYear == years[i] && post.data.read == true) {
         trackedYears[[i]]['count'] = trackedYears[i]['count'] +1
         trackedYears[[i]]['pages'] = trackedYears[i]['pages'] + post.data.pages
         trackedYears[[i]]['avRating'] = trackedYears[i]['avRating'] + post.data.rating
+        let diffTime = Math.abs(post.data.finished - post.data.started)
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        trackedYears[[i]]['days'] = trackedYears[i]['days'] +  + diffDays
+        trackedYears[[i]]['pagesAvg'] = trackedYears[i]['pages']/trackedYears[i]['days']
       }
+      
   })
   
 }
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p class="text-xs text-sienna text-bold">running count:
-  {trackedYears.map((year) => (
-    <div class="text-xs ml-2 text-gold">{year.year} : {year.count} ({year.pages} pages)</div>
- ))}
- </p>
-  <TagPills tags={tags}/>
-  <div class="flex flex-row flex-wrap justify-center pt-10 pb-10">
+ 
+  <div class="stats shadow-black shadow-xl bg-everglade-900 text-sienna">
+    {trackedYears.map((year) => (
+      <div class="stat text-xs">
+        <div class="text-sm text-gold">{year.year}</div>
+        <div class="stat-value text-base">{year.count} {year.count > 1 ? "books" : "book"}</div>
+        <div class="stat-desc text-sm text-gold">{year.pages} pages</div>
+        <div class="stat-desc text-xs text-gold">{year.pagesAvg} pages per day</div>
+      </div>
+    ))}
+   </div>
+  <BookPills tags={tags}/>
+  
+  <div class="flex flex-col lg:flex-row flex-wrap justify-evenly pt-10 pb-10 align-items-evenly">
     {
       allPosts.map((post) => (
           // post.slug.search('/') > 0 ? <h2>{post.slug.substring(0, post.slug.indexOf('/'))}</h2><ul><BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} /></ul> : <BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
@@ -56,6 +72,11 @@ for (let i = 0; i < years.length; i++) {
           rating={post.data.rating} 
           slug={post.slug} tags={post.data.tags} 
           author={post.data.author}
+          image={post.data.image}
+          reading={post.data.reading}
+          started={post.data.started}
+          finished={post.data.finished}
+          read={post.data.read}
           url={"https://openlibrary.org/search?q=" + post.data.title.replace(' ', '+') + "&author=" + post.data.author.replace(' ', '+')} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
       ))
     }

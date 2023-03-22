@@ -1,15 +1,19 @@
 ---
 const { tags } = Astro.props;
 ---
-<div class="text-center">
+<div class="text-center mt-3">
   <button id="showtags" class="btn lg:hidden text-gold">show tags</button>
   <button id="hidetags" class="btn hidden text-gold">hide tags</button>
 </div>
 <div class="mt-1 flex justify-center space-x-4 flex-wrap">
 
-  
+
   <div id="tags" class="btn-group btn-group-vertical lg:btn-group-horizontal hidden lg:inline-flex">
- 
+    <button 
+      class="btn tag-button [word-wrap: break-word] flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-everglade-600 py-0 px-[12px] text-[13px] font-normal normal-case leading-loose text-everglade-100 hover:bg-everglade-400 shadow-none transition-opacity duration-1500 ease-linear hover:!shadow-none active:bg-everglade-800 dark:bg-neutral-600 dark:text-neutral-200"  
+      data-target="reading"
+      data-te-chip-init
+      data-te-ripple-init>Reading</button>
       <button 
       class="btn tag-button [word-wrap: break-word] flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] bg-everglade-600 py-0 px-[12px] text-[13px] font-normal normal-case leading-loose text-everglade-100 hover:bg-everglade-400 shadow-none transition-opacity duration-1500 ease-linear hover:!shadow-none active:bg-everglade-800 dark:bg-neutral-600 dark:text-neutral-200"  
       data-target="all"

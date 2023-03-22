@@ -5,7 +5,7 @@ const { url, title, sub, folder, tags, image, slug } = Astro.props;
 const bg = "bg-url[('" + url + "')]";
 ---
 
-<a
+<!-- <a
   class="m-1 list flex justify-center block w-full lg:w-1/6 rounded-lg bg-everglade-500 border-solid border-2 border-everglade-900 p-6 shadow-black shadow-lg dark:bg-neutral-700 bg-everglade-900 block rounded-lg bg-everglade-900 p-6 shadow-lg dark:bg-neutral-700"
   data-tags={tags != undefined ? tags : "none"}
   href={url}
@@ -18,4 +18,27 @@ const bg = "bg-url[('" + url + "')]";
       {title}
     </h5>
   </div>
+</a>
+<a
+  class="list mt-4"
+  data-tags={tags != undefined ? tags : "none"}
+  href={url}
+  target="_blank"
+> -->
+<a
+  class="list mt-2"
+  data-tags={tags != undefined ? tags : "none"}
+  href={url}
+>
+<div class="card card-compact w-full lg:w-64 bg-everglade-900 shadow-xl shadow-black  min-height-200">
+  
+    {image.url != '' ? <figure  class="recipe-image"><img src={image.url} alt={image.alt} /></figure> : ''}
+    
+  
+  <div class="card-body">
+    <div class="flex flex-row justify-between">
+      <h2 class="card-title">{title}</h2>
+    </div>
+  </div>
+</div>
 </a>
