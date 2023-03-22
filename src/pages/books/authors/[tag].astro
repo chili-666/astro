@@ -28,7 +28,7 @@ const tags = [...new Set(posts.map((post) => post.data.author).flat())];
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
   <TagPills tags={tags} />
-  <div class="flex flex-row flex-wrap justify-center pt-10 pb-10">
+  <!-- <div class="flex flex-row flex-wrap justify-center pt-10 pb-10">
     {
       posts.map((post) => (
         <BookPost
@@ -38,5 +38,5 @@ const tags = [...new Set(posts.map((post) => post.data.author).flat())];
         />
       ))
     }
-  </div>
+  </div> -->
 </BaseLayout>
