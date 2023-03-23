@@ -1,33 +1,36 @@
 ---
 
-title: 'Kartoffel-Käse-Püree mit Spitzkohl'
+title: 'Crispy Reis mit Sushi-Salat'
 pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/spitzkohl.jpg'
-    alt: 'Kartoffel-Käse-Püree mit Spitzkohl'
-tags: ["kartoffel", "veggie"]
+    url: '../images/crispyrice.jpg'
+    alt: 'Crispy Reis mit Sushi-Salat'
+tags: ["reis", "veggie", "asia"]
 ---
-* 1 kg Kartoffeln, mehligkochend oder vorwiegend festkochend
-* 1 kleiner Spitzkohl
-* 200 ml Sahne (oder Milch, wenn's sein muss)
-* 75 g Butter
-* 50 g harten Käse, z.B. Cheddar
-* 1 kleines Glas (90 g) Kapern
-* 1-2 kleine rote Zwiebeln
-* 2-3 Knoblauchzehen
-* 200 ml Gemüsebrühe
-* Salz, Pfeffer, Öl
-  
-Die Kapern abgießen und gut abtropfen lassen. Die Kartoffeln schälen, vierteln und in Salzwasser etwa 25 Minuten weich kochen. Derweil die Zwiebeln schälen, in Ringe schneiden und in der Pfanne für zehn Minuten auf mittlerer Hitze anbraten. Anschließend herausnehmen und beiseitestellen.
+* 200 g klebriger Reis, etwa Milchreis oder Sushireis
+* 400 ml Wasser
+* 200 g Salatgurke
+* 200 g Karotte
+* 2 Lauchzwiebeln
+* 3-4 EL Mayo
+* 3-4 EL Frischkäse
+* je 2 cl Reisessig, Sesamöl, Sojasoße, Sriracha-Soße (eine Chili-Soße mit Knoblauch)
+* Etwas Zucker und Salz
+* Optional: geröstete Sesamkörner, Jalapeño-Ringe, Ingwer nach Geschmack
+Zuerst den Reis mit der doppelten Menge Wasser (also 400 Milliliter Wasser auf 200 Gramm Reis) und einer großen Prise Salz abgedeckt aufkochen lassen. Dann mit aufgelegtem Deckel auf der ausgestellten, aber noch heißen Herdplatte für 30 Minuten dämpfen lassen und dabei nicht anrühren.
 
-Dann die Kapern mit einem großen Schluck Öl in die Pfanne geben. Etwa fünf Minuten auf hoher Hitze knusprig braten, dabei regelmäßig bewegen – aber Vorsicht, das Fett könnte spritzen! Trotz des Abtropfens sind die Kapern erfahrungsgemäß nämlich sehr feucht, das verträgt sich nicht mit heißem Öl.
+Den noch warmen Reis mit dem Reisessig, etwas Zucker und gegebenenfalls mehr Salz abschmecken, dabei gut durchrühren. Je klebriger er wird, desto einfacher ist später das Braten.
 
-Nun den Spitzkohl längs entlang des Strunks halbieren und die Hälften vorsichtig in je vier gleich große Teile schneiden. Mathematiker:innen würden sagen: den Kohlkopf achteln. Die Stücke vorsichtig abspülen, trocken tupfen und dann mit etwas Öl in eine heiße Pfanne (oder Grillpfanne, für Grillstreifen) geben. Für drei bis vier Minuten von jeder Seite anbraten, dann die Brühe zugeben und einen Deckel auflegen. Für rund 20 bis 25 Minuten auf mittlerer Hitze köcheln lassen, nach der Hälfte der Zeit einmal umdrehen. Dabei sehr vorsichtig sein und am besten mit zwei Pfannenwendern arbeiten, damit die Stücke nicht auseinanderfallen.
+Eine breite Auflaufform mit Frischhaltefolie auslegen und den gewürzten Reis hineingeben. Mit einem Spatel oder Löffel die Masse so flach wie möglich andrücken. In den Kühlschrank stellen und den Reis 30 Minuten abkühlen lassen.
 
-Nun in einem kleinen Topf die Butter schmelzen lassen und mit der Sahne vermengen. Die Mischung gut pfeffern und leicht salzen, außerdem je nach Geschmack ein bis drei Zehen Knoblauch hineinreiben oder -pressen. Das Kartoffelwasser abgießen und die Sahne-Butter-Mischung zu den weichen Kartoffeln in den Topf geben. Gut mit einem Kartoffelstampfer oder einem Handrührgerät auf kleiner Stufe vermengen, bis eine seidig-glatte Masse entstanden ist.
+Derweil den Salat zubereiten. Die Gurke waschen, entkernen (damit der Salat nicht verwässert) und in kleine Würfel hacken. Die Karotte und Lauchzwiebeln waschen und ebenfalls in feine Würfel oder Ringe hacken. Den optionalen Ingwer schälen und reiben oder fein würfeln.
 
-Nun den Käse reiben unter das Püree heben. Noch einmal mit Salz und Pfeffer abschmecken – aber vorsichtig, die Kapern bringen später noch viel Salz mit.
+Das präparierte Gemüse mit der Mayo, der Soja- und Sriracha-Soße vermengen. Wer eingelegte Jalapeños da hat, kann etwas von der Lake an den Salat geben, oder einen Schuss Reisessig. Gut verrühren und beiseitestellen.
 
-Das Kartoffelpüree auf einen (idealerweise vorgewärmten) Teller streichen, und die Kohlschnitten darauf drapieren. Mit Zwiebeln und Kapern bestreuen. Zur Abrundung kann noch eine weitere Flocke Butter oder etwas mehr geriebener Käse darauf gegeben werden. Fertig ist der kalorienspendende Herbstschmaus. Vielleicht hilft ein Foto davon auf Tinder ja beim Dating?
+Den erkalteten Reis auf ein Brettchen stürzen und in etwa vier bis fünf Zentimeter breite und sieben bis acht Zentimeter lange Rechtecke schneiden. Schmaler sollten sie nicht sein, weil sie sonst leicht in der Pfanne zerbrechen
+
+Die Reisküchlein mit ausreichend Öl in der Pfanne von beiden Seiten bei mittlerer Hitze knusprig braten. Beim Wenden sehr vorsichtig sein. Am einfachsten geht es, wenn man sie am Pfannenrand hochschiebt und sanft umkippen lässt. Nach spätestens zehn Minuten sollten die Küchlein goldbraun angebraten sein.
+
+Zum Anrichten etwas Frischkäse (oder Guacamole) auf dem Reis verstreichen und dann einen Löffel vom durchgezogenen Salat darauf geben. Zuletzt kommen die optionalen Jalapeños oder der Sesam als Deko zum Einsatz.
