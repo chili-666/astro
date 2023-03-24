@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/avocado_reis.jpg'
+    url: '/images/avocado_reis.jpg'
     alt: 'Bowl mit Avocado und Reis'
 tags: ["veggie", "reis", "kalt"]
 ---
