@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/thai-suppe-mit-glasnudeln-spinat-und-huehnchen.jpg'
+    url: '/images/thai-suppe-mit-glasnudeln-spinat-und-huehnchen.jpg'
     alt: 'Thai Suppe mit Glasnudeln, Spinat und Hühnchen'
 tags: ["pasta", "veggie", "asia"]
 ---

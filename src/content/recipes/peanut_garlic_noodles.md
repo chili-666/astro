@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/peanut_noodles.jpg'
+    url: '/images/peanut_noodles.jpg'
     alt: 'Peanutbutter-Garlic-Noodles'
 tags: ["recipe", "pasta", "veggie"]
 ---

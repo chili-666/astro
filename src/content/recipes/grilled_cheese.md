@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/grilled_cheese.jpg'
+    url: '/images/grilled_cheese.jpg'
     alt: 'Gegrillte Käse-Sandwiches mit Blitz-Tomatensuppe'
 tags: ["schnell", "veggie", "USA"]
 ---

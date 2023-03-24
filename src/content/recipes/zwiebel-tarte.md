@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/fjt201210020-zwiebel-tarte.jpg'
+    url: '/images/fjt201210020-zwiebel-tarte.jpg'
     alt: 'ZWIEBEL-TARTE'
 tags: ["veggie", "backen"]
 ---

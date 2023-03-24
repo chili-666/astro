@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/english-muffins.jpg'
+    url: '/images/english-muffins.jpg'
     alt: 'English Muffins'
 tags: ["recipe", "backen", "frühstück"]
 ---

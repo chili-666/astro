@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/cacio.jpg'
+    url: '/images/cacio.jpg'
     alt: 'Pasta Cacio e Pepe'
 tags: ["recipe", "pasta", "veggie"]
 ---

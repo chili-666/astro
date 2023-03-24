@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/spitzkohl.jpg'
+    url: '/images/spitzkohl.jpg'
     alt: 'Kartoffel-Käse-Püree mit Spitzkohl'
 tags: ["kartoffeln", "veggie"]
 ---

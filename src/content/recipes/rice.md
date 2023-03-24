@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/sushi-reis-kochen.jpg'
+    url: '/images/sushi-reis-kochen.jpg'
     alt: 'Reis'
 tags: ["reis"]
 ---

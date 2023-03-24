@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/korea_kartoffeln.jpg'
+    url: '/images/korea_kartoffeln.jpg'
     alt: 'Koreanische Kartoffeln mit Sesam, Honig und Knoblauch'
 tags: ["kartoffeln", "veggie", "asia"]
 ---

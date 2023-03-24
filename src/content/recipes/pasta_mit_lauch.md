@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/lauch.jpg'
+    url: '/images/lauch.jpg'
     alt: 'Cremige Pasta mit Lauch'
 tags: ["pasta", "veggie"]
 ---

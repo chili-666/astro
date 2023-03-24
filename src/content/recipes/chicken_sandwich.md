@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/chicken-sandwich.jpg'
+    url: '/images/chicken-sandwich.jpg'
     alt: 'Chicken-Sandwiches'
 tags: ["schnell", "toast", "chicken", "USA"]
 ---

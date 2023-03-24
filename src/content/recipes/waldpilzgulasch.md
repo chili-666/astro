@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/waldpilz-gulasch-in-weisswein-sahne.jpg'
+    url: '/images/waldpilz-gulasch-in-weisswein-sahne.jpg'
     alt: 'Waldpilz-Gulasch in Weißwein-Sahne'
 tags: ["veggie", "pilze"]
 ---

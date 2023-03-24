@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '../images/crispyrice.jpg'
+    url: '/images/crispyrice.jpg'
     alt: 'Crispy Reis mit Sushi-Salat'
 tags: ["reis", "veggie", "asia"]
 ---
