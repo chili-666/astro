@@ -15,7 +15,8 @@ const {
   reading,
   started,
   finished,
-  read
+  read,
+  pages
   } = Astro.props;
 // const tags = post.split(",");
 import { StarIcon } from "@heroicons/react/24/solid";
@@ -58,7 +59,7 @@ if (reading) {
       {genre} | {started.getDate()}/{started.getMonth()+1}/{started.getFullYear()} {read == true ? <span> - {finished.getDate()}/{finished.getMonth()+1}/{finished.getFullYear()}</span> : ''}
     </div>
     <div class="ml-auto mr-0 text-xs text-gold drop-shadow">
-      written by {author}
+      written by {author} | {pages} pages
     </div>
    
   </div>

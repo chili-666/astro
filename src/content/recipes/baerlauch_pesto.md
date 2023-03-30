@@ -1,6 +1,5 @@
 ---
-
-title: 'Baerlauchpesto'
+title: 'Bärlauchpesto'
 pubDate: 2023-03-20
 description: ''
 author: 'me'
