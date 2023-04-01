@@ -4,7 +4,7 @@ author: 'Dan Simmons'
 readYear: '2023'
 readMonth: '03'
 description: 'This is the first post of my new Astro blog.'
-rating: 4
+rating: 5
 tags: ["2023", "science fiction"]
 genre: "space opera"
 pages: 481
