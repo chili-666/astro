@@ -12,7 +12,7 @@ image:
     url: "../images/books/hyperion.jpg"
     alt: 'Hyperion'
 read: true
-reading: true
+reading: false
 started: 2023-03-22
 finished: 2023-04-01
 ---
