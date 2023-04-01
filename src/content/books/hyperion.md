@@ -11,9 +11,9 @@ pages: 481
 image:
     url: "../images/books/hyperion.jpg"
     alt: 'Hyperion'
-read: false
+read: true
 reading: true
 started: 2023-03-22
-finished: 2023-03-30
+finished: 2023-04-01
 ---
 
