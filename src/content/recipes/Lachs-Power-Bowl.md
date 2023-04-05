@@ -5,7 +5,7 @@ pubDate: 2023-03-20
 description: ''
 author: 'me'
 image:
-    url: '/images/avocado_lachs_bowl.jpg'
+    url: '/images/avocado_lachs_bowl.jpeg'
     alt: 'Bowl mit Avocado und Reis'
 tags: ["veggie", "kartoffel", "kalt", "bowl"]
 ---
