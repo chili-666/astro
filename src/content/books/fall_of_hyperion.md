@@ -11,8 +11,8 @@ pages: 481
 image:
     url: "../images/books/hyperion_fall.jpg"
     alt: 'Fall of Hyperion'
-read: false
-reading: true
+read: true 
+reading: false
 started: 2023-04-01
-finished: 2023-04-01
+finished: 2023-04-07
 ---
