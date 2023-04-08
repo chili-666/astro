@@ -7,7 +7,7 @@ author: 'me'
 image:
     url: '/images/hefezopf.jpg'
     alt: 'Hefezopf'
-tags: ["backen", "hefeteig", "ostern"]
+tags: ["backen", "frühstück"]
 ---
 * 1 kg	Weizenmehl Type 405, gutes
 * 500 ml	Milch, lauwarme
