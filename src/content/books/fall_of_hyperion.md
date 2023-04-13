@@ -7,7 +7,7 @@ description: 'This is the first post of my new Astro blog.'
 rating: 4
 tags: ["2023", "science fiction"]
 genre: "space opera"
-pages: 481
+pages: 518
 image:
     url: "../images/books/hyperion_fall.jpg"
     alt: 'Fall of Hyperion'
