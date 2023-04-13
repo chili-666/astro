@@ -130,7 +130,7 @@ for (let i = 0; i < trackedYears.length; i++) {
       allPosts.map((post) => (
           // post.slug.search('/') > 0 ? <h2>{post.slug.substring(0, post.slug.indexOf('/'))}</h2><ul><BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} /></ul> : <BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
         <BookPost
-          client:load
+          
           readMonth={post.data.readMonth} 
           readYear={post.data.readYear} 
           pages={post.data.pages} 
