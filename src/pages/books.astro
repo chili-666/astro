@@ -37,7 +37,7 @@ for (let i = 0; i < years.length; i++) {
         let diffTime = Math.abs(post.data.finished - post.data.started)
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         trackedYears[[i]]['days'] = trackedYears[i]['days'] +  + diffDays
-        trackedYears[[i]]['pagesAvg'] = trackedYears[i]['pages']/trackedYears[i]['days']
+        trackedYears[[i]]['pagesAvg'] = Math.round(trackedYears[i]['pages']/trackedYears[i]['days']*100)/100
       }
       
   })
