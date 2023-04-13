@@ -22,7 +22,7 @@ const {
 import { StarIcon } from "@heroicons/react/24/solid";
 import StarRating from "./StarRating.astro";
 let starRating = "";
-const today = new Date();
+const today = new Date('today');
 const timeDiff = today.getTime() - new Date(started).getTime()
 const diffDays = Math.floor((timeDiff/(1000*60*60*24)))
 for (let i = 0; i < rating; i++) {
