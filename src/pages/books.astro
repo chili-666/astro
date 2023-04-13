@@ -6,25 +6,44 @@ import Slug from "./posts/[...slug].astro";
 import BookPills from "../components/BookPills.astro";
 const pageTitle = "Books";
 const allPosts = await getCollection("books");
-allPosts.sort((a,b) => (a.data.title > b.data.title) ? 1 : ((b.data.title > a.data.title) ? -1 : 0))
+// allPosts.sort((a,b) => (a.data.title > b.data.title) ? 1 : ((b.data.title > a.data.title) ? -1 : 0))
+allPosts.sort((a,b) => (a.data.finished < b.data.finished) ? 1 : ((b.data.finished > a.data.finished) ? -1 : 0))
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
-const years = [...new Set(allPosts.map((post) => post.data.readYear).flat())];
+let years = [...new Set(allPosts.map((post) => post.data.readYear).flat())];
+// years = years.sort((a,b) => (a < b) ? 1 : ((b > a) ? -1 : 0))
+years.sort()
 const ratings = [...new Set(allPosts.map((post) => post.data.rating).flat())];
 let starRating = ''
 for (let i = 0; i < ratings; i++) {
   starRating = starRating + "★";
 }
 
+if (years[years.length -1] == 'soon') {
+  years.pop();
+}
+
+years.reverse()
+
+
 let trackedYears = [];
 for (let i = 0; i < years.length; i++) {
-  trackedYears[i] = {
+  // if (years[i] != 'soon') {
+    trackedYears[i] = {
     "year": years[i],
     "count": 0,
     "pages": 0,
     "avRating": 0,
     "days": 0,
-    "pagesAvg": 0
+    "pagesAvg": 0,
+    "first": '',
+    "last": '',
+    'overallDays': 0,
+    'perBook': 0,
+    'toGo': 0,
+    'pagesToGo': 0
   }
+// }
+  
 }
 
 
@@ -38,33 +57,80 @@ for (let i = 0; i < years.length; i++) {
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         trackedYears[[i]]['days'] = trackedYears[i]['days'] +  + diffDays
         trackedYears[[i]]['pagesAvg'] = Math.round(trackedYears[i]['pages']/trackedYears[i]['days']*100)/100
+        // trackedYears[[i]]['first'] = ''
+        // trackedYears[[i]]['last'] = ''
+        const finished = new Date(post.data.finished).getTime()
+        const started = new Date(post.data.started).getTime()
+        if (trackedYears[[i]]['first'] != '') {
+            if (trackedYears[[i]]['first'] > started) {
+                trackedYears[[i]]['first'] = started
+            }
+        } else {
+          trackedYears[[i]]['first'] = started
+       }
+       
+        if (trackedYears[[i]]['last'] != '') {
+           if (trackedYears[[i]]['last'] < finished) {
+                trackedYears[[i]]['last'] = finished
+            }
+        } else {
+          trackedYears[[i]]['last'] = finished
+        }
+      }
+      if (years[i] == new Date().getFullYear()) {
+        if (post.data.readYear == "soon") {
+          trackedYears[i]['toGo'] = trackedYears[i]['toGo'] +1
+          trackedYears[i]['pagesToGo'] = trackedYears[i]['pagesToGo'] + post.data.pages
+        }
       }
       
   })
   
 }
 
+// for (let i = 0; i < trackedYears.length; i++) {
+//   if (trackedYears[i]['year'] == 'soon') {
+//     trackedYears = trackedYears.slice(i+1)
+//   }
+// }
+
+for (let i = 0; i < trackedYears.length; i++) {
+  
+    const timeDiff = trackedYears[i]['last'] - trackedYears[i]['first'];
+    const days = timeDiff/(1000*60*60*24)
+    const perBook = Math.round(days/trackedYears[i]['count']*100)/100
+    trackedYears[i]['perBook'] = perBook;
+
+
+
+}
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
  
-  <div class="stats shadow-black shadow-xl bg-everglade-900 text-sienna">
+  
     {trackedYears.map((year) => (
+      <div class="stats shadow-black shadow-xl bg-everglade-900 text-sienna lg:mx-2 my-2 lg:my-0">
       <div class="stat text-xs">
         <div class="text-sm text-gold">{year.year}</div>
         <div class="stat-value text-base">{year.count} {year.count > 1 ? "books" : "book"}</div>
         <div class="stat-desc text-sm text-gold">{year.pages} pages</div>
-        <div class="stat-desc text-xs text-gold">{year.pagesAvg} pages per day</div>
+        <div class="stat-desc text-xs text-gold">{year.pagesAvg} pages per day / {year.perBook} days per book</div>
+        <div class="stat-desc text-xs text-gold">{year.toGo} books / {year.pagesToGo} pages on toRead-List</div>
+       
       </div>
+    </div>
     ))}
-   </div>
+   <!-- </div> -->
   <BookPills tags={tags}/>
   
   <div class="flex flex-col lg:flex-row flex-wrap justify-evenly pt-10 pb-10 align-items-evenly">
     {
       allPosts.map((post) => (
           // post.slug.search('/') > 0 ? <h2>{post.slug.substring(0, post.slug.indexOf('/'))}</h2><ul><BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} /></ul> : <BlogPost url={"/posts/" + post.slug} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
-        <BookPost 
+        <BookPost
+          client:load
           readMonth={post.data.readMonth} 
           readYear={post.data.readYear} 
           pages={post.data.pages} 

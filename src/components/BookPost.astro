@@ -22,7 +22,9 @@ const {
 import { StarIcon } from "@heroicons/react/24/solid";
 import StarRating from "./StarRating.astro";
 let starRating = "";
-
+const today = new Date();
+const timeDiff = today.getTime() - new Date(started).getTime()
+const diffDays = Math.floor((timeDiff/(1000*60*60*24)))
 for (let i = 0; i < rating; i++) {
   starRating = starRating + "★";
 }
@@ -35,10 +37,11 @@ if (reading) {
 ---
 
 <a
-  class="list mt-4"
+  class={reading == false && read == false  ? 'list mt-4 toread' : "list mt-4"}
   data-tags={test != undefined ? test : "none"}
   href={url}
   target="_blank"
+  style={reading == false && read == false  ? "display:none" : ""}
 >
 <div class="card card-compact w-full lg:w-64 bg-everglade-900 shadow-xl shadow-black">
 
@@ -47,13 +50,15 @@ if (reading) {
   </figure>
   <div class="card-body">
     <div class="ml-auto mr-0 text-xs text-sienna font-sans">
-      {starRating}
-
+      
+      {reading == true ? <div class="badge bg-gold text-raisin text-xs">Reading ({diffDays} days)</div> : ''}
+      {reading == false && read == false  ? <div class="badge bg-raisin text-gold text-xs">to read</div> : ''}
+      {reading == false && read == true ? starRating : ''}
       <!-- <StarIcon class="block h-6 w-6 text-everglade-100" /> -->
     </div>
     <div class="flex flex-row justify-between">
       <h2 class="card-title">{title}</h2>
-      {reading == true ? <div class="badge bg-gold text-raisin">Reading</div> : ''}
+     
     </div>
     <div class="ml-auto mr-0 text-xs text-sienna drop-shadow">
       {genre} | {started.getDate()}/{started.getMonth()+1}/{started.getFullYear()} {read == true ? <span> - {finished.getDate()}/{finished.getMonth()+1}/{finished.getFullYear()}</span> : ''}
