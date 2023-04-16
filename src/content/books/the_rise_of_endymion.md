@@ -1,8 +1,8 @@
 ---
 title: 'The Rise of Endymion'
 author: 'Dan Simmons'
-readYear: 'soon'
-readMonth: ''
+readYear: '2023'
+readMonth: '04'
 description: 'This is the first post of my new Astro blog.'
 rating: 4
 tags: ["toRead", "science fiction"]
@@ -12,7 +12,7 @@ image:
     url: "../images/books/the-rise-of-endymion.jpg"
     alt: 'The Rise of Endymion'
 read: false
-reading: false
-started: 2023-12-31
+reading: true
+started: 2023-04-16
 finished: 2023-12-31
 ---
