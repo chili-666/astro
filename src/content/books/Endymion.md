@@ -11,8 +11,8 @@ pages: 441
 image:
     url: "../images/books/endymion.jpg"
     alt: 'Fall of Hyperion'
-read: false
-reading: true
+read: true
+reading: false
 started: 2023-04-07
-finished: 2023-04-07
+finished: 2023-04-16
 ---
