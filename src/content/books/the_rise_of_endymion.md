@@ -11,8 +11,8 @@ pages: 579
 image:
     url: "../images/books/the-rise-of-endymion.jpg"
     alt: 'The Rise of Endymion'
-read: false
-reading: true
+read: true
+reading: false
 started: 2023-04-16
-finished: 2023-12-31
+finished: 2023-04-27
 ---
