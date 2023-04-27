@@ -1,10 +1,10 @@
 ---
-title: 'Scepter of the Ancienzs'
+title: 'Scepter of the Ancients'
 author: 'Derek Landy'
 readYear: '2023'
 readMonth: '04'
 description: 'This is the first post of my new Astro blog.'
-rating: 4
+rating: 1
 tags: ["2023", "fantasy", "funny"]
 genre: "fun fantasy"
 pages: 367
