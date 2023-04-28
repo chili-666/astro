@@ -4,15 +4,15 @@ author: 'Derek Landy'
 readYear: '2023'
 readMonth: '04'
 description: 'This is the first post of my new Astro blog.'
-rating: 1
+rating: 3
 tags: ["2023", "fantasy", "funny"]
 genre: "fun fantasy"
 pages: 367
 image:
     url: "../images/books/scepter.jpg"
     alt: 'Scepter of the Ancients'
-read: false
-reading: true
+read: true
+reading: false
 started: 2023-04-27
-finished: 2023-12-31
+finished: 2023-04-28
 ---
