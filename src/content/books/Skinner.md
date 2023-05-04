@@ -6,8 +6,8 @@ readMonth: '04'
 description: 'This is the first post of my new Astro blog.'
 rating: 1
 tags: ["2023", "science fiction"]
-genre: "sf"
-pages: 368
+genre: "hard sf"
+pages: 592
 image:
     url: "../images/books/skinner.jpg"
     alt: 'the Skinner'
