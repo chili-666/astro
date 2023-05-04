@@ -11,8 +11,8 @@ pages: 368
 image:
     url: "../images/books/mickey7.jpg"
     alt: 'Mickey7'
-read: false
-reading: true
+read: true
+reading: false
 started: 2023-04-28
-finished: 2023-12-16
+finished: 2023-05-03
 ---
