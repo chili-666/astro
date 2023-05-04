@@ -1,6 +1,6 @@
 ---
 title: 'The Skinner'
-author: 'Edward Ashton'
+author: 'Neal Asher'
 readYear: '2023'
 readMonth: '04'
 description: 'This is the first post of my new Astro blog.'
