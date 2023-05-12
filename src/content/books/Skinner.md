@@ -11,8 +11,8 @@ pages: 592
 image:
     url: "../images/books/skinner.jpg"
     alt: 'the Skinner'
-read: false
-reading: true
+read: true
+reading: false
 started: 2023-05-03
-finished: 2023-12-31
+finished: 2023-05-11
 ---
