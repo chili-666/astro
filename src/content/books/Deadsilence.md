@@ -24,9 +24,9 @@ image:
 
     alt: 'Dead Silence'
 
-read: true
+read: false
 
-reading: false
+reading: true
 
 started: 2023-04-12
 
