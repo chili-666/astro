@@ -20,7 +20,7 @@ pages: 344
 
 image:
 
-    url: "../images/books/deadsilence.jpg"
+    url: "../images/books/deadsilence.jpeg"
 
     alt: 'Dead Silence'
 
