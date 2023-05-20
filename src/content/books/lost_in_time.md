@@ -20,16 +20,16 @@ pages: 350
 
 image:
 
-    url: "../images/books/lost-in-time.jpeg"
+    url: "../images/books/lost-in-time.jpg"
 
-    alt: 'Dead Silence'
+    alt: 'Lost in Time'
 
-read: true
+read: false
 
-reading: false
+reading: true
 
-started: 2023-04-12
+started: 2023-04-19
 
-finished: 2023-04-19
+finished: 2023-12-31
 
 ---
