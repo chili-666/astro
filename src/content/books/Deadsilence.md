@@ -24,12 +24,12 @@ image:
 
     alt: 'Dead Silence'
 
-read: false
+read: true
 
-reading: true
+reading: false
 
 started: 2023-04-12
 
-finished: 2023-12-31
+finished: 2023-04-19
 
 ---
