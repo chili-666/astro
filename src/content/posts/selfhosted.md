@@ -1,3 +1,13 @@
+---
+title: 'Selfhosted Stuff'
+pubDate: 2022-07-01
+description: 'Things I host on my server'
+author: 'me'
+image:
+    url: ''
+    alt: ''
+tags: ["linux", "software"]
+---
 https://github.com/dani-garcia/vaultwarden
 https://portainer.io/
 https://github.com/binwiederhier/ntfy
