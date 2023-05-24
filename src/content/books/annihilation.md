@@ -20,9 +20,9 @@ pages: 194
 
 image:
 
-    url: "../images/books/annhilaton.jpeg"
+    url: "../images/books/annihilaton.jpeg"
 
-    alt: 'Dead Silence'
+    alt: 'Annihilation'
 
 read: false
 
