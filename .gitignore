@@ -21,3 +21,4 @@ pnpm-debug.log*
 .DS_Store
 src/content/SETTINGS.md
 src/content/index.md
+src/content/PLUGS.md
