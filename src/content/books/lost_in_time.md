@@ -24,12 +24,12 @@ image:
 
     alt: 'Lost in Time'
 
-read: false
+read: true
 
-reading: true
+reading: false
 
-started: 2023-04-19
+started: 2023-05-19
 
-finished: 2023-12-31
+finished: 2023-05-23
 
 ---
