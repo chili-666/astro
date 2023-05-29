@@ -24,9 +24,9 @@ image:
 
     alt: 'Annihilation'
 
-read: false
+read: true
 
-reading: true
+reading: false
 
 started: 2023-05-24
 
