@@ -26,7 +26,7 @@ image:
 
 read: false
 
-reading: zrue
+reading: true 
 
 started: 2023-06-01
 
