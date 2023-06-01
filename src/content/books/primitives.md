@@ -24,12 +24,12 @@ image:
 
     alt: 'Annihilation'
 
-read:false
+read: true
 
-reading: true
+reading: false
 
 started: 2023-05-29
 
-finished: 2023-12-31
+finished: 2023-06-01
 
 ---
