@@ -20,7 +20,7 @@ pages: 330
 
 image:
 
-    url: "../images/books/annihilaton.jpeg"
+    url: "../images/books/primitives.jpg"
 
     alt: 'Annihilation'
 
