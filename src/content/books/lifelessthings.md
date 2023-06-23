@@ -1,4 +1,4 @@
-  ---
+---
 
 title: 'These Lifeless Things'
 
@@ -20,7 +20,7 @@ pages: 113
 
 image:
 
-    url: "../images/books/lifeless.jpeg"
+    url: "../images/books/these-lifeless-things-1.jpg"
 
     alt: 'Dead Silence'
 
