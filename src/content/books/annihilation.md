@@ -20,7 +20,7 @@ pages: 194
 
 image:
 
-    url: "../images/books/annihilaton.jpeg"
+    url: "../images/books/annihilation-taschenbuch-jeff-vandermeer-englisch.webp"
 
     alt: 'Annihilation'
 
