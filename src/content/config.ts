@@ -53,8 +53,8 @@ const booksCollection = defineCollection({
   })
 });
 // Export a single `collections` object to register your collection(s)
-export const collections = {
-  posts: postsCollection,
-  recipes: recipeCollection,
-  books: booksCollection,
-};
+// export const collections = {
+//   posts: postsCollection,
+//   recipes: recipeCollection,
+//   books: booksCollection,
+// };
