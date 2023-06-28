@@ -16,7 +16,7 @@ tags: ["2023", "science fiction"]
 
 genre: "space???"
 
-pages: 194
+pages: 464
 
 image:
 

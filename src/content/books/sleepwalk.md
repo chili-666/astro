@@ -20,7 +20,7 @@ pages: 330
 
 image:
 
-    url: "../images/books/deadsilence.jpeg"
+    url: "../images/books/sleepwalk.jpg"
 
     alt: 'Dead Silence'
 
