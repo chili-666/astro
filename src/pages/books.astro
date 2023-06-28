@@ -143,7 +143,8 @@ for (let i = 0; i < trackedYears.length; i++) {
           started={post.data.started}
           finished={post.data.finished}
           read={post.data.read}
-          url={"https://openlibrary.org/search?q=" + post.data.title.replace(' ', '+') + "&author=" + post.data.author.replace(' ', '+')} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} />
+          // url={"https://openlibrary.org/search?q=" + post.data.title.replace(' ', '+') + "&author=" + post.data.author.replace(' ', '+')} title={post.data.title} sub={post.slug.search('/') > 0 ? true : false} folder={post.slug.search('/') > 0 ? post.slug.substring(0, post.slug.indexOf('/')) : 'none'})} 
+          />
       ))
     }
    </div>
